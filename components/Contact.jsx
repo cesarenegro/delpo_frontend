@@ -32,7 +32,9 @@ export default function Contact() {
                 <span className="mono text-xs text-racered">Email →</span>
               </a>
               <a
-                href="tel:+85264023317"
+                href="https://wa.me/85264023317"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center justify-between border-t border-paper/10 py-4 group focus-ring"
               >
                 <span className="text-sm text-signal group-hover:text-paper transition-colors">
@@ -41,7 +43,9 @@ export default function Contact() {
                 <span className="mono text-xs text-racered">HK mobile →</span>
               </a>
               <a
-                href="tel:+393456889374"
+                href="https://wa.me/393456889374"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center justify-between border-t border-paper/10 py-4 group focus-ring"
               >
                 <span className="text-sm text-signal group-hover:text-paper transition-colors">
