@@ -10,6 +10,7 @@ import "@fontsource/inter/800.css";
 import "@fontsource/ibm-plex-mono/400.css";
 import "@fontsource/ibm-plex-mono/500.css";
 import "@fontsource/ibm-plex-mono/600.css";
+import "mapbox-gl/dist/mapbox-gl.css";
 import "./globals.css";
 
 export const metadata = {
