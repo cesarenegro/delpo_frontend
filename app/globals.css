@@ -1,0 +1,222 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  background: #0b0c0e;
+}
+body {
+  background: #0b0c0e;
+}
+::selection {
+  background: #d91e2b;
+  color: #f4f2ee;
+}
+
+.eyebrow {
+  font-family: 'IBM Plex Mono', monospace;
+  letter-spacing: 0.22em;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+}
+
+.display {
+  font-family: Oswald, sans-serif;
+}
+.mono {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+/* Checkered flag divider */
+.flag-divider {
+  height: 10px;
+  background-image: linear-gradient(
+      45deg,
+      rgba(217, 30, 43, 0.9) 25%,
+      transparent 25%,
+      transparent 75%,
+      rgba(217, 30, 43, 0.9) 75%
+    ),
+    linear-gradient(
+      45deg,
+      rgba(217, 30, 43, 0.9) 25%,
+      transparent 25%,
+      transparent 75%,
+      rgba(217, 30, 43, 0.9) 75%
+    );
+  background-size: 14px 14px;
+  background-position: 0 0, 7px 7px;
+  opacity: 0.55;
+}
+.flag-divider.dark {
+  background-image: linear-gradient(
+      45deg,
+      rgba(0, 0, 0, 0.55) 25%,
+      transparent 25%,
+      transparent 75%,
+      rgba(0, 0, 0, 0.55) 75%
+    ),
+    linear-gradient(
+      45deg,
+      rgba(0, 0, 0, 0.55) 25%,
+      transparent 25%,
+      transparent 75%,
+      rgba(0, 0, 0, 0.55) 75%
+    );
+  opacity: 0.18;
+}
+
+.card-edge {
+  border: 1px solid rgba(244, 242, 238, 0.09);
+}
+
+/* reveal on scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.9s cubic-bezier(0.2, 0.7, 0.2, 1),
+    transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.reveal.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* marquee */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 32s linear infinite;
+}
+.marquee-wrap:hover .marquee-track {
+  animation-play-state: paused;
+}
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* pin pulse */
+.pin-dot {
+  position: relative;
+}
+.pin-dot::after {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: 9999px;
+  border: 1px solid rgba(217, 30, 43, 0.55);
+  animation: pulse-ring 2.6s cubic-bezier(0.3, 0.6, 0.4, 1) infinite;
+}
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.9;
+  }
+  80% {
+    transform: scale(1.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.9);
+    opacity: 0;
+  }
+}
+
+.tick {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Mapbox custom pin markers */
+.delpo-pin {
+  width: 18px;
+  height: 18px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.delpo-pin-core {
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 9999px;
+  background: #f4f2ee;
+  box-shadow: 0 0 0 3px rgba(11, 12, 14, 0.55);
+  transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+.delpo-pin.is-active .delpo-pin-core {
+  background: #d91e2b;
+  box-shadow: 0 0 0 5px rgba(217, 30, 43, 0.28);
+  transform: scale(1.15);
+}
+.delpo-pin:hover .delpo-pin-core {
+  transform: scale(1.1);
+}
+
+/* Mapbox attribution/controls restyled to match dark theme */
+.mapboxgl-ctrl-attrib {
+  background: rgba(11, 12, 14, 0.6) !important;
+  color: #9095a0 !important;
+}
+.mapboxgl-ctrl-attrib a {
+  color: #9095a0 !important;
+}
+.mapboxgl-ctrl-group {
+  background: #1d2025 !important;
+  border: 1px solid rgba(244, 242, 238, 0.1) !important;
+}
+.mapboxgl-ctrl-icon {
+  filter: invert(1);
+}
+
+.progress-line {
+  transform-origin: left center;
+  transition: transform 1.2s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0b0c0e;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2e34;
+  border-radius: 6px;
+}
+
+.focus-ring:focus-visible {
+  outline: 2px solid #d91e2b;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+.bg-noise {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 3px 3px;
+}
+
+.hero-vignette {
+  background: linear-gradient(
+    180deg,
+    rgba(11, 12, 14, 0.35) 0%,
+    rgba(11, 12, 14, 0.55) 40%,
+    rgba(11, 12, 14, 0.96) 92%
+  );
+}
