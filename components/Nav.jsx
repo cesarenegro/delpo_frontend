@@ -59,7 +59,7 @@ export default function Nav() {
               href="https://delpo.online/login"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 mono text-xs uppercase tracking-widest bg-paper text-void hover:bg-paperdim px-5 py-2.5 rounded-sm transition-colors focus-ring"
+              className="inline-flex items-center gap-2 mono text-xs uppercase tracking-widest bg-lime-400 text-black hover:bg-lime-500 px-5 py-2.5 rounded-sm transition-colors focus-ring"
             >
               Delpo QC
             </a>
@@ -113,7 +113,7 @@ export default function Nav() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={closeMenu}
-            className="inline-flex w-fit items-center gap-2 mono text-xs uppercase tracking-widest bg-paper text-void px-5 py-2.5 rounded-sm mt-2"
+            className="inline-flex w-fit items-center gap-2 mono text-xs uppercase tracking-widest bg-lime-400 text-black hover:bg-lime-500 px-5 py-2.5 rounded-sm mt-2"
           >
             Delpo QC
           </a>
