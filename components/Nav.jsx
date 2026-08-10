@@ -56,7 +56,7 @@ export default function Nav() {
 
           <div className="hidden lg:flex items-center gap-3">
             <a
-              href="https://delpo.online/login"
+              href="https://delpo.vercel.app/login"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 mono text-xs uppercase tracking-widest bg-lime-400 text-black hover:bg-lime-500 px-5 py-2.5 rounded-sm transition-colors focus-ring"
@@ -109,7 +109,7 @@ export default function Nav() {
             </a>
           ))}
           <a
-            href="https://delpo.online/login"
+            href="https://delpo.vercel.app/login"
             target="_blank"
             rel="noopener noreferrer"
             onClick={closeMenu}
